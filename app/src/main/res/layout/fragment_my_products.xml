@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -71,12 +72,12 @@
                             android:textColor="#000000"
                             android:textSize="30sp"
                             android:textStyle="bold" />
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imagePencil1"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
-                            android:src="@drawable/ic_edit" />
+                            app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
@@ -140,12 +141,12 @@
                             android:textColor="#000000"
                             android:textSize="30sp"
                             android:textStyle="bold" />
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imagePencil2"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
-                            android:src="@drawable/ic_edit" />
+                            app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
@@ -209,12 +210,12 @@
                             android:textColor="#000000"
                             android:textSize="30sp"
                             android:textStyle="bold" />
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imagePencil3"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
-                            android:src="@drawable/ic_edit" />
+                            app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
@@ -278,12 +279,12 @@
                             android:textColor="#000000"
                             android:textSize="30sp"
                             android:textStyle="bold" />
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imagePencil4"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
-                            android:src="@drawable/ic_edit" />
+                            app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
@@ -347,12 +348,12 @@
                             android:textColor="#000000"
                             android:textSize="30sp"
                             android:textStyle="bold" />
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/imagePencil"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
-                            android:src="@drawable/ic_edit" />
+                            app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>

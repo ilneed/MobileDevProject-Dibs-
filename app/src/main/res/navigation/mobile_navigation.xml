@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_sell"
-        android:name="com.project.mobiledevprojectdibs.ui.gallery.GalleryFragment"
-        android:label="@string/sell"
-        tools:layout="@layout/fragment_sell" />
-
-    <fragment
         android:id="@+id/nav_notification"
         android:name="com.project.mobiledevprojectdibs.ui.slideshow.SlideshowFragment"
         android:label="@string/notification"
@@ -36,9 +30,34 @@
         android:id="@+id/myProducts"
         android:name="com.project.mobiledevprojectdibs.MyProducts"
         android:label="@string/my_products"
-        tools:layout="@layout/fragment_my_products" />
+        tools:layout="@layout/fragment_my_products" >
+        <action
+            android:id="@+id/action_myProducts_to_editMyProduct"
+            app:destination="@id/editMyProduct" />
+    </fragment>
     <activity
         android:id="@+id/logout"
         android:name="com.project.mobiledevprojectdibs.Login"
         tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/startSelling"
+        android:name="com.project.mobiledevprojectdibs.StartSelling"
+        android:label="activity_start_selling"
+        tools:layout="@layout/activity_start_selling" />
+    <activity
+        android:id="@+id/editMyProduct"
+        android:name="com.project.mobiledevprojectdibs.EditMyProduct"
+        android:label="activity_edit_my_product"
+        tools:layout="@layout/activity_edit_my_product" />
+    <fragment
+        android:id="@+id/editMyProducts"
+        android:name="com.project.mobiledevprojectdibs.EditMyProducts"
+        android:label="fragment_edit_my_products"
+        tools:layout="@layout/fragment_edit_my_products" />
+    <fragment
+        android:id="@+id/clothesCategory"
+        android:name="com.project.mobiledevprojectdibs.ClothesCategory"
+        android:label="fragment_clothes_category"
+        tools:layout="@layout/fragment_clothes_category" />
+
 </navigation>
