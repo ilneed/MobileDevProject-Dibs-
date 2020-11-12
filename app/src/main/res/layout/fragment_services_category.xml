@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClothesCategory">
-
+    tools:context=".ServicesCategory">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,7 +34,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="130dp"
                         android:shadowColor="#ffffff"
-                        android:text="CLOTHES"
+                        android:text="SERVICES"
                         android:textColor="#000000"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -65,13 +63,13 @@
                             android:id="@+id/product1pic"
                             android:layout_width="180dp"
                             android:layout_height="180dp"
-                            android:src="@drawable/shoes" />
+                            android:src="@drawable/service1" />
 
                         <TextView
                             android:id="@+id/product1label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="D/MS/X Shoes"
+                            android:text="Team Quality Services"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold"
@@ -81,7 +79,7 @@
                             android:id="@+id/product1price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 1,000"
+                            android:text="Php 2,000"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginLeft="5dp"/>
@@ -98,14 +96,14 @@
                             android:id="@+id/product2pic"
                             android:layout_width="180dp"
                             android:layout_height="180dp"
-                            android:src="@drawable/shorts"
+                            android:src="@drawable/service2"
                             />
 
                         <TextView
                             android:id="@+id/product2label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Men Shorts"
+                            android:text="Plumbing Services"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold"
@@ -115,7 +113,7 @@
                             android:id="@+id/product2price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 250"
+                            android:text="Php 800"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginLeft="5dp"/>
@@ -144,13 +142,13 @@
                             android:id="@+id/product3pic"
                             android:layout_width="180dp"
                             android:layout_height="180dp"
-                            android:src="@drawable/shirt" />
+                            android:src="@drawable/service3" />
 
                         <TextView
                             android:id="@+id/product3label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Men Tshirt"
+                            android:text="Amante Plumbing Services"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold"
@@ -160,7 +158,7 @@
                             android:id="@+id/product3price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 250"
+                            android:text="Php 750"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginLeft="5dp"/>
@@ -177,14 +175,14 @@
                             android:id="@+id/product4pic"
                             android:layout_width="180dp"
                             android:layout_height="180dp"
-                            android:src="@drawable/shirt2"
+                            android:src="@drawable/aromaservices"
                             />
 
                         <TextView
                             android:id="@+id/product4label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mr. Silly Shirt"
+                            android:text="Aroma Catering Services"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold"
@@ -194,7 +192,7 @@
                             android:id="@+id/product4price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 300"
+                            android:text="Php 3,500"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginLeft="5dp"/>
@@ -223,13 +221,13 @@
                             android:id="@+id/product5pic"
                             android:layout_width="180dp"
                             android:layout_height="180dp"
-                            android:src="@drawable/tanktop" />
+                            android:src="@drawable/bodypamper" />
 
                         <TextView
                             android:id="@+id/product5label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Men Tank Top"
+                            android:text="Home Massage Services"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold"
@@ -239,7 +237,7 @@
                             android:id="@+id/product5price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 200"
+                            android:text="Php 750"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginLeft="5dp"/>
@@ -256,14 +254,14 @@
                             android:id="@+id/product6pic"
                             android:layout_width="180dp"
                             android:layout_height="180dp"
-                            android:src="@drawable/men_pants"
+                            android:src="@drawable/ecoclean"
                             />
 
                         <TextView
                             android:id="@+id/product6label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Men Pants"
+                            android:text="Eco Clean Services"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold"
@@ -273,7 +271,7 @@
                             android:id="@+id/product6price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 1000"
+                            android:text="Php 300"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:layout_marginLeft="5dp"/>
