@@ -3,13 +3,21 @@ package com.project.mobiledevprojectdibs;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TableRow;
+
+import com.project.mobiledevprojectdibs.ui.home.HomeViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,12 +26,10 @@ import android.widget.ImageButton;
  */
 public class MyProducts extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -31,15 +37,8 @@ public class MyProducts extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MyProducts.
-     */
-    // TODO: Rename and change types and number of parameters
+
+
     public static MyProducts newInstance(String param1, String param2) {
         MyProducts fragment = new MyProducts();
         Bundle args = new Bundle();
@@ -59,15 +58,27 @@ public class MyProducts extends Fragment {
 
 
     }
+
     ImageButton editButton;
+    private HomeViewModel homeViewModel;
+    TableRow myProductOne;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-      View v = inflater.inflate(R.layout.fragment_my_products, container, false);
+        homeViewModel =
+                new ViewModelProvider(this).get(HomeViewModel.class);
+      View root = inflater.inflate(R.layout.fragment_my_products, container, false);
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                //textView.setText(s);
 
-      editButton = v.findViewById(R.id.imagePencil1);
+            }
+        });
 
+      editButton = root.findViewById(R.id.editimage1);
       editButton.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
@@ -75,6 +86,20 @@ public class MyProducts extends Fragment {
               startActivity(in);
           }
       });
-    return v;
+
+      myProductOne = root.findViewById(R.id.productOneTable);
+
+      myProductOne.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              PerProductInterface perProductInterface = new PerProductInterface();
+              FragmentTransaction transaction = getFragmentManager().beginTransaction();
+              transaction.replace(R.id.myProducts,perProductInterface);
+              transaction.commit();
+          }
+      });
+
+
+    return root;
     }
 }

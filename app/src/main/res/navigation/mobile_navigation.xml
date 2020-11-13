@@ -64,5 +64,11 @@
         android:name="com.project.mobiledevprojectdibs.ServicesCategory"
         android:label="fragment_services_category"
         tools:layout="@layout/fragment_services_category" />
+    <fragment
+        android:id="@+id/perProductInterface"
+        android:name="com.project.mobiledevprojectdibs.PerProductInterface"
+        android:label="fragment_per_product_interface"
+        tools:layout="@layout/fragment_per_product_interface" />
+
 
 </navigation>

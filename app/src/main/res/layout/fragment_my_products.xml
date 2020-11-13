@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/myProducts"
+    android:background="#ffffff"
     tools:context=".MyProducts">
 
     <ScrollView
@@ -31,7 +33,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/titlemyprod"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="75dp"
@@ -43,16 +45,98 @@
                     </LinearLayout>
                 </TableRow>
                 <TableRow
+                    android:id="@+id/productOneTable"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:background="#FAD02E"
+                    android:layout_marginBottom="20dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+
+                        >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/myproductname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Men's Blazer"
+                            android:textColor="#000000"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/myproductedit1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="60dp"
+                            android:text="Edit"
+                            android:textColor="#000000"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                        <ImageButton
+                            android:id="@+id/editimage1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#FAD02E"
+                            app:srcCompat="@drawable/ic_edit" />
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingLeft="20dp">
 
+                        <ImageView
+                            android:id="@+id/myproduct1img1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blazer1" />
+
+                        <ImageView
+                            android:id="@+id/myproduct1img2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blazer2" />
+                        <ImageView
+                            android:id="@+id/myproduct1img3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blazer3" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FAD02E"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        >
+
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/myproductname2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
@@ -63,7 +147,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textEdit1"
+                            android:id="@+id/myproductedit2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -73,55 +157,60 @@
                             android:textSize="30sp"
                             android:textStyle="bold" />
                         <ImageButton
-                            android:id="@+id/imagePencil1"
+                            android:id="@+id/editimage2"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
+                            android:background="#FAD02E"
                             app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
-            <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="20dp">
-
-                     <ImageView
-                        android:id="@+id/imageView31"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                         android:layout_margin="10dp"
-                        android:src="@drawable/box" />
-
-                    <ImageView
-                        android:id="@+id/imageView51"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/box" />
-                    <ImageView
-                        android:id="@+id/imageView61"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/box" />
-                </LinearLayout>
-            </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingLeft="20dp">
 
+                        <ImageView
+                            android:id="@+id/myproduct2img1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/box" />
+
+                        <ImageView
+                            android:id="@+id/myproduct2img2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/box" />
+                        <ImageView
+                            android:id="@+id/myproduct2img3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/box" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FAD02E"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        >
+
                         <TextView
-                            android:id="@+id/textView92"
+                            android:id="@+id/myproductname3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
@@ -132,7 +221,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textEdit2"
+                            android:id="@+id/myproductedit3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -142,17 +231,19 @@
                             android:textSize="30sp"
                             android:textStyle="bold" />
                         <ImageButton
-                            android:id="@+id/imagePencil2"
+                            android:id="@+id/editimage3"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
+                            android:background="#FAD02E"
                             app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -160,20 +251,20 @@
                         android:paddingLeft="20dp">
 
                         <ImageView
-                            android:id="@+id/imageView32"
+                            android:id="@+id/myproduct3img1"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
                             android:src="@drawable/box" />
 
                         <ImageView
-                            android:id="@+id/imageView52"
+                            android:id="@+id/myproduct3img2"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
                             android:src="@drawable/box" />
                         <ImageView
-                            android:id="@+id/imageView62"
+                            android:id="@+id/myproduct3img3"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
@@ -182,15 +273,18 @@
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:background="#FAD02E"
+                    >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingLeft="20dp">
+                        android:paddingLeft="20dp"
+                        >
 
                         <TextView
-                            android:id="@+id/textView93"
+                            android:id="@+id/myproductname4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
@@ -201,7 +295,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textEdit3"
+                            android:id="@+id/myproductedit4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -211,17 +305,19 @@
                             android:textSize="30sp"
                             android:textStyle="bold" />
                         <ImageButton
-                            android:id="@+id/imagePencil3"
+                            android:id="@+id/editimage4"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
+                            android:background="#FAD02E"
                             app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -229,20 +325,20 @@
                         android:paddingLeft="20dp">
 
                         <ImageView
-                            android:id="@+id/imageView33"
+                            android:id="@+id/myproduct4img1"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
                             android:src="@drawable/box" />
 
                         <ImageView
-                            android:id="@+id/imageView53"
+                            android:id="@+id/myproduct4img2"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
                             android:src="@drawable/box" />
                         <ImageView
-                            android:id="@+id/imageView63"
+                            android:id="@+id/myproduct4img3"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
@@ -251,15 +347,18 @@
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:background="#FAD02E"
+                    >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingLeft="20dp">
+                        android:paddingLeft="20dp"
+                        >
 
                         <TextView
-                            android:id="@+id/textView94"
+                            android:id="@+id/myproductname5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
@@ -270,7 +369,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textEdit4"
+                            android:id="@+id/myproductedit5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -280,17 +379,19 @@
                             android:textSize="30sp"
                             android:textStyle="bold" />
                         <ImageButton
-                            android:id="@+id/imagePencil4"
+                            android:id="@+id/editimage5"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="10dp"
+                            android:background="#FAD02E"
                             app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -298,89 +399,20 @@
                         android:paddingLeft="20dp">
 
                         <ImageView
-                            android:id="@+id/imageView34"
+                            android:id="@+id/myproduct5img1"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
                             android:src="@drawable/box" />
 
                         <ImageView
-                            android:id="@+id/imageView54"
+                            android:id="@+id/myproduct5img2"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
                             android:src="@drawable/box" />
                         <ImageView
-                            android:id="@+id/imageView64"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/box" />
-                    </LinearLayout>
-                </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingLeft="20dp">
-
-                        <TextView
-                            android:id="@+id/textView9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Product Name"
-                            android:textColor="#000000"
-                            android:textSize="30sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textEdit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="60dp"
-                            android:text="Edit"
-                            android:textColor="#000000"
-                            android:textSize="30sp"
-                            android:textStyle="bold" />
-                        <ImageButton
-                            android:id="@+id/imagePencil"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
-                            app:srcCompat="@drawable/ic_edit" />
-                    </LinearLayout>
-
-                </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingLeft="20dp">
-
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/box" />
-
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/box" />
-                        <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/myproduct5img3"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="10dp"
