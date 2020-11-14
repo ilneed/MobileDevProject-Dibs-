@@ -3,17 +3,19 @@ package com.project.mobiledevprojectdibs;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FoodCategory#newInstance} factory method to
+ * Use the {@link FoodCategoryy#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FoodCategory extends Fragment {
+public class FoodCategoryy extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class FoodCategory extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FoodCategory() {
+    public FoodCategoryy() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class FoodCategory extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FoodCategory.
+     * @return A new instance of fragment FoodCategoryy.
      */
     // TODO: Rename and change types and number of parameters
-    public static FoodCategory newInstance(String param1, String param2) {
-        FoodCategory fragment = new FoodCategory();
+    public static FoodCategoryy newInstance(String param1, String param2) {
+        FoodCategoryy fragment = new FoodCategoryy();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -54,11 +56,27 @@ public class FoodCategory extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    LinearLayout productOneFood;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_food_category, container, false);
+        View root = inflater.inflate(R.layout.fragment_food_categoryy, container, false);
+
+        productOneFood = root.findViewById(R.id.firstProductFood);
+        productOneFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FriedChicken friedChicken = new FriedChicken();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.foodCategoryy,friedChicken);
+                transaction.commit();
+            }
+        });
+
+
+
+
+        return root;
     }
 }
