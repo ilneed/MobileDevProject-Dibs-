@@ -54,11 +54,7 @@
         android:name="com.project.mobiledevprojectdibs.ClothesCategory"
         android:label="fragment_clothes_category"
         tools:layout="@layout/fragment_clothes_category" />
-    <fragment
-        android:id="@+id/servicesCategory"
-        android:name="com.project.mobiledevprojectdibs.ServicesCategory"
-        android:label="fragment_services_category"
-        tools:layout="@layout/fragment_services_category" />
+
     <fragment
         android:id="@+id/perProductInterface"
         android:name="com.project.mobiledevprojectdibs.PerProductInterface"
@@ -74,6 +70,16 @@
         android:name="com.project.mobiledevprojectdibs.FoodCategoryy"
         android:label="fragment_food_categoryy"
         tools:layout="@layout/fragment_food_categoryy" />
+    <fragment
+        android:id="@+id/sellerProfile"
+        android:name="com.project.mobiledevprojectdibs.SellerProfile"
+        android:label="fragment_seller_profile"
+        tools:layout="@layout/fragment_seller_profile" />
+    <fragment
+        android:id="@+id/serviceCategoryy"
+        android:name="com.project.mobiledevprojectdibs.ServiceCategoryy"
+        android:label="fragment_service_categoryy"
+        tools:layout="@layout/fragment_service_categoryy" />
 
 
 </navigation>

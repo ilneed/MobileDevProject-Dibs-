@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TableRow;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +60,7 @@ public class FriedChicken extends Fragment {
     }
 
     ImageButton backButton;
+    TableRow productSeller;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,6 +76,17 @@ public class FriedChicken extends Fragment {
                 transaction.commit();
             }
         });
+        productSeller = root.findViewById(R.id.productSeller);
+        productSeller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SellerProfile sellerProfile = new SellerProfile();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.friedChicken, sellerProfile);
+                transaction.commit();
+            }
+        });
+
 
         return root;
     }

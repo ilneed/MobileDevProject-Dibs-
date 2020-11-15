@@ -9,7 +9,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import com.project.mobiledevprojectdibs.ui.home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,6 +63,7 @@ public class ClothesCategory extends Fragment {
 
 
     LinearLayout productOne;
+    ImageButton backButton;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -73,6 +77,17 @@ public class ClothesCategory extends Fragment {
                 FriedChicken friedChicken = new FriedChicken();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.clothesCategory,friedChicken);
+                transaction.commit();
+            }
+        });
+
+        backButton = root.findViewById(R.id.backButtonCC);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeFragment homeFragment = new HomeFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.clothesCategory,homeFragment);
                 transaction.commit();
             }
         });

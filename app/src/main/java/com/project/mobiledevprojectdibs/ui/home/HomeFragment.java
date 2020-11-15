@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.project.mobiledevprojectdibs.ClothesCategory;
 import com.project.mobiledevprojectdibs.FoodCategoryy;
 import com.project.mobiledevprojectdibs.R;
-import com.project.mobiledevprojectdibs.ServicesCategory;
+import com.project.mobiledevprojectdibs.ServiceCategoryy;
 
 public class HomeFragment extends Fragment {
 
@@ -65,9 +65,9 @@ public class HomeFragment extends Fragment {
         servicesTable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ServicesCategory servicesCategory = new ServicesCategory();
+                ServiceCategoryy serviceCategoryy = new ServiceCategoryy();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.homeFragment,servicesCategory);
+                transaction.replace(R.id.homeFragment,serviceCategoryy);
                 transaction.commit();
             }
         });
