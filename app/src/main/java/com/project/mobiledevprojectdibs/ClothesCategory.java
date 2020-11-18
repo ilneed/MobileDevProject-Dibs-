@@ -62,7 +62,7 @@ public class ClothesCategory extends Fragment {
     }
 
 
-    LinearLayout productOne;
+    LinearLayout productOne, productTwo, productThree, productFour, productFive, productSix;
     ImageButton backButton;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -74,9 +74,59 @@ public class ClothesCategory extends Fragment {
         productOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FriedChicken friedChicken = new FriedChicken();
+                DmsxShoes dmsxShoes = new DmsxShoes();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.clothesCategory,friedChicken);
+                transaction.replace(R.id.clothesCategory,dmsxShoes);
+                transaction.commit();
+            }
+        });
+        productTwo = root.findViewById(R.id.secondProduct);
+        productTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MenShorts menShorts = new MenShorts();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.clothesCategory,menShorts);
+                transaction.commit();
+            }
+        });
+        productThree = root.findViewById(R.id.thirdProduct);
+        productThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MenTshirt menTshirt = new MenTshirt();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.clothesCategory,menTshirt);
+                transaction.commit();
+            }
+        });
+        productFour = root.findViewById(R.id.fourthProduct);
+        productFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SillyShirt sillyShirt = new SillyShirt();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.clothesCategory,sillyShirt);
+                transaction.commit();
+            }
+        });
+        productFive = root.findViewById(R.id.fifthProduct);
+        productFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MenTankTop menTankTop = new MenTankTop();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.clothesCategory,menTankTop);
+                transaction.commit();
+            }
+        });
+        productSix = root.findViewById(R.id.sixthProduct);
+        productSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MenPants menPants = new MenPants();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.clothesCategory,menPants);
                 transaction.commit();
             }
         });

@@ -59,7 +59,7 @@ public class FoodCategoryy extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    LinearLayout productOneFood;
+    LinearLayout productOneFood,productTwoFood,productThreeFood,productFourFood,productFiveFood,productSixFood;
     ImageButton backButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,6 +77,58 @@ public class FoodCategoryy extends Fragment {
                 transaction.commit();
             }
         });
+
+        productTwoFood = root.findViewById(R.id.secondProductFood);
+        productTwoFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Milktea milktea = new Milktea();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.foodCategoryy,milktea);
+                transaction.commit();
+            }
+        });
+        productThreeFood = root.findViewById(R.id.thirdProductFood);
+        productThreeFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Spaghetti spaghetti = new Spaghetti();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.foodCategoryy,spaghetti);
+                transaction.commit();
+            }
+        });
+        productFourFood = root.findViewById(R.id.fourthProductFood);
+        productFourFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ChickenBurger chickenBurger = new ChickenBurger();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.foodCategoryy,chickenBurger);
+                transaction.commit();
+            }
+        });
+        productFiveFood = root.findViewById(R.id.fifthProductFood);
+        productFiveFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomemadePizza homemadePizza = new HomemadePizza();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.foodCategoryy,homemadePizza);
+                transaction.commit();
+            }
+        });
+        productSixFood = root.findViewById(R.id.sixthProductFood);
+        productSixFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CaliforniaMaki californiaMaki = new CaliforniaMaki();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.foodCategoryy,californiaMaki);
+                transaction.commit();
+            }
+        });
+
 
         backButton = root.findViewById(R.id.backButtonFC);
         backButton.setOnClickListener(new View.OnClickListener() {

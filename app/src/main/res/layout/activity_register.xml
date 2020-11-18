@@ -6,211 +6,209 @@
     android:layout_height="match_parent"
     android:background="#FAD02E"
     tools:context=".Register">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/closeButtonRegister"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#FAD02E"
+            app:srcCompat="@drawable/ic_exit"
+            />
+        <ImageView
+            android:id="@+id/applogo2"
+            android:layout_width="132dp"
+            android:layout_height="101dp"
+            android:layout_marginLeft="130dp"
+            app:srcCompat="@drawable/app_logo_2" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="90dp"
+            android:text="CREATE ACCOUNT"
+            android:textColor="#000000"
+            android:textSize="24sp"
+             />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+           >
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                 />
+            <EditText
+                android:id="@+id/nameTextBox"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/emailTextBox"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:inputType="textEmailAddress"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <TextView
+                android:id="@+id/userLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USERNAME:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/userText"
+                android:layout_width="178dp"
+                android:layout_height="35dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:inputType="textPersonName"
+             />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <TextView
+                android:id="@+id/passLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                app:passwordToggleEnabled="true"
+                android:layout_marginLeft="20dp"
+                >
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:inputType="textPassword"
+                    android:background="#ffffff"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <TextView
+                android:id="@+id/cpassLabel"
+                android:layout_width="109dp"
+                android:layout_height="60dp"
+                android:text="CONFIRM PASSWORD:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
 
-    <EditText
-        android:id="@+id/nameTextBox"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="28dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                tools:ignore="MissingConstraints"
+                app:passwordToggleEnabled="true"
+                android:layout_marginLeft="15dp"
+                >
+                <EditText
+                    android:id="@+id/cpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:inputType="textPassword"
+                    android:background="#ffffff"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="151dp"
+                android:layout_height="33dp"
+                android:text="PHONE NUMBER:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/phoneTextBox"
+                android:layout_width="148dp"
+                android:layout_height="35dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:inputType="text|number"
+               />
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_agree_to_the_terms_of_services_and_privacy_policy"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            />
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="150dp"
+            android:text="SUBMIT"
+            />
 
-    <TextView
-        android:id="@+id/nameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
-        android:text="NAME:"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/nameTextBox"
-        app:layout_constraintHorizontal_bias="0.629"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="CREATE ACCOUNT"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
-
-    <ImageView
-        android:id="@+id/applogo2"
-        android:layout_width="132dp"
-        android:layout_height="101dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066"
-        app:srcCompat="@drawable/app_logo_2" />
-
-    <TextView
-        android:id="@+id/emailLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EMAIL:"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/emailTextBox"
-        app:layout_constraintHorizontal_bias="0.644"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameLabel"
-        app:layout_constraintVertical_bias="0.055" />
-
-    <EditText
-        android:id="@+id/emailTextBox"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextBox" />
-
-    <TextView
-        android:id="@+id/userLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="32dp"
-        android:text="USERNAME:"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
-
-    <EditText
-        android:id="@+id/userText"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="28dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toEndOf="@+id/userLabel"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextBox" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="PASSWORD:"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/passTextBox"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userLabel" />
-
-    <TextView
-        android:id="@+id/cpassLabel"
-        android:layout_width="109dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="CONFIRM PASSWORD:"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/cpassTextBox"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <EditText
-        android:id="@+id/passTextBox"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userText" />
-
-    <EditText
-        android:id="@+id/cpassTextBox"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passTextBox" />
-
-    <TextView
-        android:id="@+id/phoneLabel"
-        android:layout_width="151dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="29dp"
-        android:text="PHONE NUMBER:"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/phoneTextBox"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpassLabel" />
-
-    <EditText
-        android:id="@+id/phoneTextBox"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpassTextBox"
-        app:layout_constraintVertical_bias="0.035" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/i_agree_to_the_terms_of_services_and_privacy_policy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.677"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="570dp"
-        android:text="SUBMIT"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

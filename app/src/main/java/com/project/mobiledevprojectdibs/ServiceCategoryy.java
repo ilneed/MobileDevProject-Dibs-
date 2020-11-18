@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.project.mobiledevprojectdibs.ui.home.HomeFragment;
 
@@ -59,11 +60,72 @@ public class ServiceCategoryy extends Fragment {
         }
     }
     ImageButton backButton;
+    LinearLayout productOne, productTwo, productThree, productFour, productFive, productSix;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root =  inflater.inflate(R.layout.fragment_service_categoryy, container, false);
+        productOne = root.findViewById(R.id.productOneServices);
+        productOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TeamQualityServices teamQualityServices = new TeamQualityServices();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.serviceCategoryy,teamQualityServices);
+                transaction.commit();
+            }
+        });
+        productTwo = root.findViewById(R.id.productTwoServices);
+        productTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PlumbingServices plumbingServices = new PlumbingServices();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.serviceCategoryy,plumbingServices);
+                transaction.commit();
+            }
+        });
+        productThree = root.findViewById(R.id.productThreeServices);
+        productThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AmantePlumbingServices amantePlumbingServices = new AmantePlumbingServices();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.serviceCategoryy,amantePlumbingServices);
+                transaction.commit();
+            }
+        });
+        productFour = root.findViewById(R.id.productFourServices);
+        productFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AromaCateringServices aromaCateringServices = new AromaCateringServices();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.serviceCategoryy,aromaCateringServices);
+                transaction.commit();
+            }
+        });
+        productFive = root.findViewById(R.id.productFiveServices);
+        productFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeMassageServices homeMassageServices = new HomeMassageServices();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.serviceCategoryy,homeMassageServices);
+                transaction.commit();
+            }
+        });
+        productSix = root.findViewById(R.id.productSixServices);
+        productSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EcoCleanServices ecoCleanServices = new EcoCleanServices();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.serviceCategoryy,ecoCleanServices);
+                transaction.commit();
+            }
+        });
 
         backButton = root.findViewById(R.id.backButtonSC);
         backButton.setOnClickListener(new View.OnClickListener() {

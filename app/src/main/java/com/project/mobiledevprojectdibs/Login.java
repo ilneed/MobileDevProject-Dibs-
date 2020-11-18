@@ -6,15 +6,19 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.content.Intent;
 import android.widget.TextView;
 import android.widget.Button;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     TextView register, forgotpass;
     private Button goHome;
+    EditText username, password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,13 +39,16 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         goHome = (Button)findViewById(R.id.loginButton);
         goHome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login.this,Home.class);
-                startActivity(intent);
+            public void onClick(View view) { 
+                    Intent intent = new Intent(Login.this,Home.class);
+                    startActivity(intent);
+
             }
         });
+
     }
 }

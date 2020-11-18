@@ -30,11 +30,7 @@
         android:id="@+id/myProducts"
         android:name="com.project.mobiledevprojectdibs.MyProducts"
         android:label="@string/my_products"
-        tools:layout="@layout/fragment_my_products" >
-        <action
-            android:id="@+id/action_myProducts_to_editMyProduct"
-            app:destination="@id/editMyProduct" />
-    </fragment>
+        tools:layout="@layout/fragment_my_products" />
     <activity
         android:id="@+id/logout"
         android:name="com.project.mobiledevprojectdibs.Login"
@@ -80,6 +76,91 @@
         android:name="com.project.mobiledevprojectdibs.ServiceCategoryy"
         android:label="fragment_service_categoryy"
         tools:layout="@layout/fragment_service_categoryy" />
+    <fragment
+        android:id="@+id/milktea"
+        android:name="com.project.mobiledevprojectdibs.Milktea"
+        android:label="fragment_milktea"
+        tools:layout="@layout/fragment_milktea" />
+    <fragment
+        android:id="@+id/spaghetti"
+        android:name="com.project.mobiledevprojectdibs.Spaghetti"
+        android:label="fragment_spaghetti"
+        tools:layout="@layout/fragment_spaghetti" />
+    <fragment
+        android:id="@+id/chickenBurger"
+        android:name="com.project.mobiledevprojectdibs.ChickenBurger"
+        android:label="fragment_chicken_burger"
+        tools:layout="@layout/fragment_chicken_burger" />
+    <fragment
+        android:id="@+id/homemadePizza"
+        android:name="com.project.mobiledevprojectdibs.HomemadePizza"
+        android:label="fragment_homemade_pizza"
+        tools:layout="@layout/fragment_homemade_pizza" />
+    <fragment
+        android:id="@+id/californiaMaki"
+        android:name="com.project.mobiledevprojectdibs.CaliforniaMaki"
+        android:label="fragment_california_maki"
+        tools:layout="@layout/fragment_california_maki" />
+    <fragment
+        android:id="@+id/dmsxShoes"
+        android:name="com.project.mobiledevprojectdibs.DmsxShoes"
+        android:label="fragment_dmsx_shoes"
+        tools:layout="@layout/fragment_dmsx_shoes" />
+    <fragment
+        android:id="@+id/menShorts"
+        android:name="com.project.mobiledevprojectdibs.MenShorts"
+        android:label="fragment_men_shorts"
+        tools:layout="@layout/fragment_men_shorts" />
+    <fragment
+        android:id="@+id/menTshirt"
+        android:name="com.project.mobiledevprojectdibs.MenTshirt"
+        android:label="fragment_men_tshirt"
+        tools:layout="@layout/fragment_men_tshirt" />
+    <fragment
+        android:id="@+id/sillyShirt"
+        android:name="com.project.mobiledevprojectdibs.SillyShirt"
+        android:label="fragment_silly_shirt"
+        tools:layout="@layout/fragment_silly_shirt" />
+    <fragment
+        android:id="@+id/menTankTop"
+        android:name="com.project.mobiledevprojectdibs.MenTankTop"
+        android:label="fragment_men_tank_top"
+        tools:layout="@layout/fragment_men_tank_top" />
+    <fragment
+        android:id="@+id/menPants"
+        android:name="com.project.mobiledevprojectdibs.MenPants"
+        android:label="fragment_men_pants"
+        tools:layout="@layout/fragment_men_pants" />
+    <fragment
+        android:id="@+id/teamQualityServices"
+        android:name="com.project.mobiledevprojectdibs.TeamQualityServices"
+        android:label="fragment_team_quality_services"
+        tools:layout="@layout/fragment_team_quality_services" />
+    <fragment
+        android:id="@+id/plumbingServices"
+        android:name="com.project.mobiledevprojectdibs.PlumbingServices"
+        android:label="fragment_plumbing_services"
+        tools:layout="@layout/fragment_plumbing_services" />
+    <fragment
+        android:id="@+id/amantePlumbingServices"
+        android:name="com.project.mobiledevprojectdibs.AmantePlumbingServices"
+        android:label="fragment_amante_plumbing_services"
+        tools:layout="@layout/fragment_amante_plumbing_services" />
+    <fragment
+        android:id="@+id/aromaCateringServices"
+        android:name="com.project.mobiledevprojectdibs.AromaCateringServices"
+        android:label="fragment_aroma_catering_services"
+        tools:layout="@layout/fragment_aroma_catering_services" />
+    <fragment
+        android:id="@+id/homeMassageServices"
+        android:name="com.project.mobiledevprojectdibs.HomeMassageServices"
+        android:label="fragment_home_massage_services"
+        tools:layout="@layout/fragment_home_massage_services" />
+    <fragment
+        android:id="@+id/ecoCleanServices"
+        android:name="com.project.mobiledevprojectdibs.EcoCleanServices"
+        android:label="fragment_eco_clean_services"
+        tools:layout="@layout/fragment_eco_clean_services" />
 
 
 </navigation>
