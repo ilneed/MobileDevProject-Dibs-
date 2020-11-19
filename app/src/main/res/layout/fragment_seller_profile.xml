@@ -5,7 +5,7 @@
     android:id="@+id/sellerProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+
     android:background="#ffffff"
     tools:context=".SellerProfile">
 
@@ -34,10 +34,10 @@
 
                     <ImageButton
                         android:id="@+id/backButtonSP"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#ffffff"
-                        app:srcCompat="@drawable/ic_back" />
+                        app:srcCompat="@drawable/ic_exit" />
                 </LinearLayout>
             </TableRow>
 
@@ -210,12 +210,12 @@
                             android:id="@+id/sellerProfileProd2"
                             android:layout_width="160dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/shoes" />
+                            android:src="@drawable/milktea" />
                         <TextView
                             android:id="@+id/sellerProfileProduct2Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="D/MS/X Shoes"
+                            android:text="BUBBLE MILKTEA"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -225,7 +225,7 @@
                             android:id="@+id/sellerProfileProduct2Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 1,000"
+                            android:text="Php 50"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>

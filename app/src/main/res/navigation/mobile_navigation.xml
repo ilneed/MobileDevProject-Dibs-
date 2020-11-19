@@ -161,6 +161,11 @@
         android:name="com.project.mobiledevprojectdibs.EcoCleanServices"
         android:label="fragment_eco_clean_services"
         tools:layout="@layout/fragment_eco_clean_services" />
+    <fragment
+        android:id="@+id/orderInterface"
+        android:name="com.project.mobiledevprojectdibs.OrderInterface"
+        android:label="fragment_order_interface"
+        tools:layout="@layout/fragment_order_interface" />
 
 
 </navigation>

@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -15,10 +16,10 @@ import com.project.mobiledevprojectdibs.ui.home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SellerProfile#newInstance} factory method to
+ * Use the {@link OrderInterface#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SellerProfile extends Fragment {
+public class OrderInterface extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +30,7 @@ public class SellerProfile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SellerProfile() {
+    public OrderInterface() {
         // Required empty public constructor
     }
 
@@ -39,11 +40,11 @@ public class SellerProfile extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SellerProfile.
+     * @return A new instance of fragment OrderInterface.
      */
     // TODO: Rename and change types and number of parameters
-    public static SellerProfile newInstance(String param1, String param2) {
-        SellerProfile fragment = new SellerProfile();
+    public static OrderInterface newInstance(String param1, String param2) {
+        OrderInterface fragment = new OrderInterface();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,33 +60,50 @@ public class SellerProfile extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    TextView productLabel, productPrice, totalAmount;
     ImageButton closeButton;
-    TextView sellerLocation, sellerName;
+    Button proceedOrder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root =  inflater.inflate(R.layout.fragment_seller_profile, container, false);
-
-        sellerName = root.findViewById(R.id.sellerProfileName);
-        sellerLocation = root.findViewById(R.id.sellerProfileLocation);
+        View root = inflater.inflate(R.layout.fragment_order_interface, container, false);
+        productLabel = root.findViewById(R.id.productLabel);
+        productPrice = root.findViewById(R.id.productPrice);
+        totalAmount = root.findViewById(R.id.totalCost);
         Bundle bundle = this.getArguments();
-        String sName = bundle.getString("sellerName");
-        String sLocation = bundle.getString("sellerLocation");
-        sellerName.setText(sName);
-        sellerLocation.setText(sLocation);
+        String label = bundle.getString("label");
+        String price = bundle.getString("price");
+        productLabel.setText(label);
+        productPrice.setText(price);
+        totalAmount.setText(price);
 
-        closeButton = root.findViewById(R.id.backButtonSP);
+        //close order interface
+        closeButton = root.findViewById(R.id.orderCloseButton);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeFragment homeFragment = new HomeFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,homeFragment);
+                transaction.replace(R.id.orderInterface,homeFragment);
+                transaction.commit();
+            }
+        });
+        //order is done
+        proceedOrder = root.findViewById(R.id.orderCloseButton);
+        proceedOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeFragment homeFragment = new HomeFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.orderInterface,homeFragment);
                 transaction.commit();
             }
         });
 
         return root;
     }
+
+
 }

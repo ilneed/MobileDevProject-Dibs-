@@ -8,8 +8,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,8 @@ public class MenTshirt extends Fragment {
     }
     ImageButton backButton;
     TableRow productSeller;
+    Button orderButton;
+    TextView productLabel, productPrice, sellerName, sellerLocation;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,9 +82,33 @@ public class MenTshirt extends Fragment {
         productSeller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String sName = sellerName.getText().toString();
+                String sLocation = sellerLocation.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("sellerName",sName);
+                bundle.putString("sellerLocation",sLocation);
                 SellerProfile sellerProfile = new SellerProfile();
+                sellerProfile.setArguments(bundle);
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.menTshirt, sellerProfile);
+                transaction.commit();
+            }
+        });
+        orderButton = root.findViewById(R.id.orderButton);
+        productLabel = root.findViewById(R.id.selleritemlabel);
+        productPrice = root.findViewById(R.id.selleritemprice);
+        orderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String label = productLabel.getText().toString();
+                String price = productPrice.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("label",label);
+                bundle.putString("price",price);
+                OrderInterface orderInterface = new OrderInterface();
+                orderInterface.setArguments(bundle);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.menTshirt, orderInterface);
                 transaction.commit();
             }
         });
