@@ -96,15 +96,13 @@ public class TeamQualityServices extends Fragment {
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String label = productLabel.getText().toString();
-                String price = productPrice.getText().toString();
-                Bundle bundle = new Bundle();
-                bundle.putString("label",label);
-                bundle.putString("price",price);
-                OrderInterface orderInterface = new OrderInterface();
-                orderInterface.setArguments(bundle);
+                NewOrderInterface newOrderInterface = new NewOrderInterface();
+                Bundle orderDetails = new Bundle();
+                orderDetails.putString("nameOfProduct",productLabel.getText().toString());
+                orderDetails.putString("priceOfProduct",productPrice.getText().toString());
+                newOrderInterface.setArguments(orderDetails);
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.teamQualityServices, orderInterface);
+                transaction.replace(R.id.teamQualityServices,newOrderInterface);
                 transaction.commit();
             }
         });

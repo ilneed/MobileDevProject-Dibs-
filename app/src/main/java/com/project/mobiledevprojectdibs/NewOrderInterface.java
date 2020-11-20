@@ -16,10 +16,10 @@ import com.project.mobiledevprojectdibs.ui.home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link OrderInterface#newInstance} factory method to
+ * Use the {@link NewOrderInterface#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OrderInterface extends Fragment {
+public class NewOrderInterface extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +30,7 @@ public class OrderInterface extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public OrderInterface() {
+    public NewOrderInterface() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class OrderInterface extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment OrderInterface.
+     * @return A new instance of fragment NewOrderInterface.
      */
     // TODO: Rename and change types and number of parameters
-    public static OrderInterface newInstance(String param1, String param2) {
-        OrderInterface fragment = new OrderInterface();
+    public static NewOrderInterface newInstance(String param1, String param2) {
+        NewOrderInterface fragment = new NewOrderInterface();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,52 +60,49 @@ public class OrderInterface extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    TextView productLabel, productPrice, totalAmount;
+    TextView orderProdName, orderProdPrice, orderTotalCost;
     ImageButton closeButton;
-    Button proceedOrder;
-
+    Button proceedOrderButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_order_interface, container, false);
-        productLabel = root.findViewById(R.id.productLabel);
-        productPrice = root.findViewById(R.id.productPrice);
-        totalAmount = root.findViewById(R.id.totalCost);
-       // Bundle orderDetails = this.getArguments();
-        //String productName = orderDetails.getString("prodName");
-        //String productCost = orderDetails.getString("prodPrice");
-        //String label = orderDetails.getString("label");
-      //  String price = orderDetails.getString("price");
-       // productLabel.setText(productName);
-      //  productPrice.setText(productCost);
-      //  totalAmount.setText(productCost);
+        View root =  inflater.inflate(R.layout.fragment_new_order_interface, container, false);
+        orderProdName = root.findViewById(R.id.productLabel);
+        orderProdPrice = root.findViewById(R.id.productPrice);
+        orderTotalCost = root.findViewById(R.id.totalCost);
+        Bundle orderDetails = this.getArguments();
+        String orderProductName = orderDetails.getString("nameOfProduct");
+        String orderProductPrice = orderDetails.getString("priceOfProduct");
+        orderProdName.setText(orderProductName);
+        orderProdPrice.setText(orderProductPrice);
+        orderTotalCost.setText(orderProductPrice);
 
-        //close order interface
         closeButton = root.findViewById(R.id.orderCloseButton);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeFragment homeFragment = new HomeFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.orderInterface,homeFragment);
+                transaction.replace(R.id.newOrderInterface,homeFragment);
                 transaction.commit();
             }
         });
-        //order is done
-        proceedOrder = root.findViewById(R.id.orderCloseButton);
-        proceedOrder.setOnClickListener(new View.OnClickListener() {
+
+        proceedOrderButton = root.findViewById(R.id.proceedOrder);
+        proceedOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeFragment homeFragment = new HomeFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.orderInterface,homeFragment);
+                transaction.replace(R.id.newOrderInterface,homeFragment);
                 transaction.commit();
             }
         });
 
+
+
+
         return root;
     }
-
-
 }

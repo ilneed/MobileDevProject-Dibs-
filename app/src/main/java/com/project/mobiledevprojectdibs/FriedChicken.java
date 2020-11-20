@@ -65,7 +65,7 @@ public class FriedChicken extends Fragment {
 
     ImageButton backButton;
     TableRow productSeller;
-    Button orderButton;
+    Button buttonOrder;
     TextView productLabel, productPrice;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,7 +83,6 @@ public class FriedChicken extends Fragment {
             }
         });
         productSeller = root.findViewById(R.id.productSeller);
-
         productSeller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,15 +92,20 @@ public class FriedChicken extends Fragment {
                 transaction.commit();
             }
         });
-        productLabel = root.findViewById(R.id.sellItemPrice);
-        productPrice = root.findViewById(R.id.sellItemLabel);
-        orderButton = root.findViewById(R.id.orderButton);
-        orderButton.setOnClickListener(new View.OnClickListener() {
+        productLabel = root.findViewById(R.id.sellItemLabel);
+        productPrice = root.findViewById(R.id.sellItemPrice);
+
+        buttonOrder = root.findViewById(R.id.orderButton);
+        buttonOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                OrderInterface orderInterface = new OrderInterface();
+                NewOrderInterface newOrderInterface = new NewOrderInterface();
+                Bundle orderDetails = new Bundle();
+                orderDetails.putString("nameOfProduct",productLabel.getText().toString());
+                orderDetails.putString("priceOfProduct",productPrice.getText().toString());
+                newOrderInterface.setArguments(orderDetails);
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.friedChicken, orderInterface);
+                transaction.replace(R.id.friedChicken,newOrderInterface);
                 transaction.commit();
             }
         });
