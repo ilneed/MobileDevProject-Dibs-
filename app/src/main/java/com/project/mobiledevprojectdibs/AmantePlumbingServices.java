@@ -62,7 +62,7 @@ public class AmantePlumbingServices extends Fragment {
     ImageButton backButton;
     TableRow productSeller;
     Button orderButton;
-    TextView productLabel, productPrice, sellerName, sellerLocation;
+    TextView productLabel, productPrice;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -79,20 +79,12 @@ public class AmantePlumbingServices extends Fragment {
             }
         });
         productSeller = root.findViewById(R.id.productSeller);
-        sellerName = root.findViewById(R.id.sellername);
-        sellerLocation = root.findViewById(R.id.sellerlocation);
         productSeller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String sName = sellerName.getText().toString();
-                String sLocation = sellerLocation.getText().toString();
-                Bundle bundle = new Bundle();
-                bundle.putString("sellerName",sName);
-                bundle.putString("sellerLocation",sLocation);
-                SellerProfile sellerProfile = new SellerProfile();
-                sellerProfile.setArguments(bundle);
+                SellerProfileTwo sellerProfileTwo = new SellerProfileTwo();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.amantePlumbingServices, sellerProfile);
+                transaction.replace(R.id.amantePlumbingServices, sellerProfileTwo);
                 transaction.commit();
             }
         });

@@ -10,16 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.project.mobiledevprojectdibs.ui.home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SellerProfile#newInstance} factory method to
+ * Use the {@link SellerProfileTwo#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SellerProfile extends Fragment {
+public class SellerProfileTwo extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +29,7 @@ public class SellerProfile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SellerProfile() {
+    public SellerProfileTwo() {
         // Required empty public constructor
     }
 
@@ -40,11 +39,11 @@ public class SellerProfile extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SellerProfile.
+     * @return A new instance of fragment SellerProfileTwo.
      */
     // TODO: Rename and change types and number of parameters
-    public static SellerProfile newInstance(String param1, String param2) {
-        SellerProfile fragment = new SellerProfile();
+    public static SellerProfileTwo newInstance(String param1, String param2) {
+        SellerProfileTwo fragment = new SellerProfileTwo();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,79 +65,78 @@ public class SellerProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root =  inflater.inflate(R.layout.fragment_seller_profile, container, false);
+        View root = inflater.inflate(R.layout.fragment_seller_profile_two, container, false);
         closeButton = root.findViewById(R.id.backButtonSP);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeFragment homeFragment = new HomeFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,homeFragment);
+                transaction.replace(R.id.sellerProfileTwo,homeFragment);
                 transaction.commit();
             }
         });
 
-        prod1  = root.findViewById(R.id.seller1prod1);
+        prod1 = root.findViewById(R.id.seller2prod1);
         prod1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FriedChicken friedChicken = new FriedChicken();
+                Spaghetti spaghetti = new Spaghetti();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,friedChicken);
+                transaction.replace(R.id.sellerProfileTwo,spaghetti);
                 transaction.commit();
             }
         });
-        prod2  = root.findViewById(R.id.seller1prod2);
+        prod2 = root.findViewById(R.id.seller2prod2);
         prod2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Milktea milktea = new Milktea();
+                ChickenBurger chickenBurger = new ChickenBurger();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,milktea);
+                transaction.replace(R.id.sellerProfileTwo,chickenBurger);
                 transaction.commit();
             }
         });
-        prod3  = root.findViewById(R.id.seller1prod3);
+        prod3 = root.findViewById(R.id.seller2prod3);
         prod3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DmsxShoes dmsxShoes = new DmsxShoes();
+                MenTshirt menTshirt = new MenTshirt();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,dmsxShoes);
+                transaction.replace(R.id.sellerProfileTwo,menTshirt);
                 transaction.commit();
             }
         });
-        prod4  = root.findViewById(R.id.seller1prod4);
+        prod4 = root.findViewById(R.id.seller2prod4);
         prod4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MenShorts menShorts = new MenShorts();
+                SillyShirt sillyShirt = new SillyShirt();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,menShorts);
+                transaction.replace(R.id.sellerProfileTwo,sillyShirt);
                 transaction.commit();
             }
         });
-        prod5  = root.findViewById(R.id.seller1prod5);
+        prod5 = root.findViewById(R.id.seller2prod5);
         prod5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TeamQualityServices teamQualityServices = new TeamQualityServices();
+                AmantePlumbingServices amantePlumbingServices = new AmantePlumbingServices();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,teamQualityServices);
+                transaction.replace(R.id.sellerProfileTwo,amantePlumbingServices);
                 transaction.commit();
             }
         });
-        prod6  = root.findViewById(R.id.seller1prod6);
+        prod6 = root.findViewById(R.id.seller2prod6);
         prod6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PlumbingServices plumbingServices = new PlumbingServices();
+                AromaCateringServices aromaCateringServices = new AromaCateringServices();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.sellerProfile,plumbingServices);
+                transaction.replace(R.id.sellerProfileTwo,aromaCateringServices);
                 transaction.commit();
             }
         });
-
         return root;
     }
 }

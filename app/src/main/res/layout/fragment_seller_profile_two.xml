@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sellerProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
-    tools:context=".SellerProfile">
+    android:id="@+id/sellerProfileTwo"
+    tools:context=".SellerProfileTwo">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="50dp"
-                            android:text="Peter Paul"
+                            android:text="Christian Joshua"
                             android:textColor="#000000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
@@ -78,7 +78,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="Taal, Batangas"
+                            android:text="Location, Location"
                             android:textColor="#000000"
                             android:textSize="15sp" />
                     </LinearLayout>
@@ -167,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="#ffffff"
-                        android:id="@+id/seller1prod1"
+                        android:id="@+id/seller2prod1"
                         android:orientation="vertical"
                         android:layout_marginRight="5dp"
                         android:padding="5dp">
@@ -176,12 +176,12 @@
                             android:id="@+id/sellerProfileProd1"
                             android:layout_width="180dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/chicken" />
+                            android:src="@drawable/spaghetti" />
                         <TextView
                             android:id="@+id/sellerProfileProduct1Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="8 pcs Fried Chicken"
+                            android:text="Spaghetti"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -191,7 +191,7 @@
                             android:id="@+id/sellerProfileProduct1Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 300"
+                            android:text="Php 120"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>
@@ -201,7 +201,7 @@
                         android:layout_height="match_parent"
                         android:background="#ffffff"
                         android:orientation="vertical"
-                        android:id="@+id/seller1prod2"
+                        android:id="@+id/seller2prod2"
                         android:layout_marginRight="5dp"
                         android:padding="5dp">
 
@@ -209,12 +209,12 @@
                             android:id="@+id/sellerProfileProd2"
                             android:layout_width="180dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/milktea" />
+                            android:src="@drawable/chickenburger" />
                         <TextView
                             android:id="@+id/sellerProfileProduct2Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="Bubble Milktea"
+                            android:text="Chicken Burger"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -224,7 +224,7 @@
                             android:id="@+id/sellerProfileProduct2Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 50"
+                            android:text="Php 100"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>
@@ -247,7 +247,7 @@
                         android:layout_height="match_parent"
                         android:background="#ffffff"
                         android:orientation="vertical"
-                        android:id="@+id/seller1prod3"
+                        android:id="@+id/seller2prod3"
                         android:layout_marginRight="5dp"
                         android:padding="5dp">
 
@@ -255,12 +255,12 @@
                             android:id="@+id/sellerProfileProd3"
                             android:layout_width="180dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/shoes" />
+                            android:src="@drawable/shirt" />
                         <TextView
                             android:id="@+id/sellerProfileProduct3Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="D/MS/X Shoes"
+                            android:text="Men Tshirt"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -270,7 +270,7 @@
                             android:id="@+id/sellerProfileProduct3Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 1,000"
+                            android:text="Php 250"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>
@@ -280,7 +280,7 @@
                         android:layout_height="match_parent"
                         android:background="#ffffff"
                         android:orientation="vertical"
-                        android:id="@+id/seller1prod4"
+                        android:id="@+id/seller2prod4"
                         android:layout_marginRight="5dp"
                         android:padding="5dp">
 
@@ -288,12 +288,12 @@
                             android:id="@+id/sellerProfileProd4"
                             android:layout_width="180dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/shorts" />
+                            android:src="@drawable/shirt2" />
                         <TextView
                             android:id="@+id/sellerProfileProduct4Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="Men Shorts"
+                            android:text="Mr. Silly Shirt"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -303,7 +303,7 @@
                             android:id="@+id/sellerProfileProduct4Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 250"
+                            android:text="Php 300"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>
@@ -327,19 +327,19 @@
                         android:background="#ffffff"
                         android:orientation="vertical"
                         android:layout_marginRight="5dp"
-                        android:id="@+id/seller1prod5"
+                        android:id="@+id/seller2prod5"
                         android:padding="5dp">
 
                         <ImageView
                             android:id="@+id/sellerProfileProd5"
                             android:layout_width="180dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/service1" />
+                            android:src="@drawable/service3" />
                         <TextView
                             android:id="@+id/sellerProfileProduct5Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="Team Quality Services"
+                            android:text="Amante Plumbing Services"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -349,7 +349,7 @@
                             android:id="@+id/sellerProfileProduct5Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 2,000"
+                            android:text="Php 750"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>
@@ -360,19 +360,19 @@
                         android:background="#ffffff"
                         android:orientation="vertical"
                         android:layout_marginRight="5dp"
-                        android:id="@+id/seller1prod6"
+                        android:id="@+id/seller2prod6"
                         android:padding="5dp">
 
                         <ImageView
                             android:id="@+id/sellerProfileProd6"
                             android:layout_width="180dp"
                             android:layout_height="160dp"
-                            android:src="@drawable/service2" />
+                            android:src="@drawable/aromaservices" />
                         <TextView
                             android:id="@+id/sellerProfileProduct6Label"
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:text="Plumbing Services"
+                            android:text="Aroma Catering Services"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold"
@@ -382,7 +382,7 @@
                             android:id="@+id/sellerProfileProduct6Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Php 800"
+                            android:text="Php 3,500"
                             android:textColor="#000000"
                             android:textSize="18sp"
                             android:layout_marginLeft="5dp"/>
@@ -391,4 +391,5 @@
             </TableRow>
         </TableLayout>
     </ScrollView>
+
 </FrameLayout>

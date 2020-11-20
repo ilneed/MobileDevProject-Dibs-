@@ -253,7 +253,7 @@
                             android:id="@+id/sellername"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Seller 1"
+                            android:text="Agift"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold" />

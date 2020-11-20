@@ -253,7 +253,7 @@
                             android:id="@+id/sellername"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Seller 1"
+                            android:text="Peter Paul"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -262,7 +262,7 @@
                             android:id="@+id/sellerlocation"
                             android:layout_width="280dp"
                             android:layout_height="wrap_content"
-                            android:text="Location, Location, Location"
+                            android:text="Taal, Batangas"
                             android:textColor="#000000" />
                     </LinearLayout>
                 </LinearLayout>

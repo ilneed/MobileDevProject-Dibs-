@@ -166,6 +166,16 @@
         android:name="com.project.mobiledevprojectdibs.OrderInterface"
         android:label="fragment_order_interface"
         tools:layout="@layout/fragment_order_interface" />
+    <fragment
+        android:id="@+id/sellerProfileTwo"
+        android:name="com.project.mobiledevprojectdibs.SellerProfileTwo"
+        android:label="fragment_seller_profile_two"
+        tools:layout="@layout/fragment_seller_profile_two" />
+    <fragment
+        android:id="@+id/sellerProfileThree"
+        android:name="com.project.mobiledevprojectdibs.SellerProfileThree"
+        android:label="fragment_seller_profile_three"
+        tools:layout="@layout/fragment_seller_profile_three" />
 
 
 </navigation>

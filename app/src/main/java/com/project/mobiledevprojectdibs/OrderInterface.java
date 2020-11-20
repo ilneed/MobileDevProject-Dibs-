@@ -72,12 +72,14 @@ public class OrderInterface extends Fragment {
         productLabel = root.findViewById(R.id.productLabel);
         productPrice = root.findViewById(R.id.productPrice);
         totalAmount = root.findViewById(R.id.totalCost);
-        Bundle bundle = this.getArguments();
-        String label = bundle.getString("label");
-        String price = bundle.getString("price");
-        productLabel.setText(label);
-        productPrice.setText(price);
-        totalAmount.setText(price);
+       // Bundle orderDetails = this.getArguments();
+        //String productName = orderDetails.getString("prodName");
+        //String productCost = orderDetails.getString("prodPrice");
+        //String label = orderDetails.getString("label");
+      //  String price = orderDetails.getString("price");
+       // productLabel.setText(productName);
+      //  productPrice.setText(productCost);
+      //  totalAmount.setText(productCost);
 
         //close order interface
         closeButton = root.findViewById(R.id.orderCloseButton);
