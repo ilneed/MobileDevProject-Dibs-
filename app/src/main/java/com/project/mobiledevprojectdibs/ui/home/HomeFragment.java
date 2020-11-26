@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.project.mobiledevprojectdibs.ClothesCategory;
 import com.project.mobiledevprojectdibs.FoodCategoryy;
 import com.project.mobiledevprojectdibs.R;
@@ -22,6 +23,7 @@ public class HomeFragment extends Fragment {
 
 
     TableRow clothesTable, foodTable, servicesTable;
+
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

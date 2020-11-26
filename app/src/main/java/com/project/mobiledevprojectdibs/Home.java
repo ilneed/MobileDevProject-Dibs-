@@ -2,6 +2,7 @@ package com.project.mobiledevprojectdibs;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ImageButton;
@@ -10,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
@@ -57,5 +59,13 @@ public class Home extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void goBackToLogIn(MenuItem item) {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(Home.this,Login.class);
+        startActivity(intent);
+        finish();
+
     }
 }

@@ -17,19 +17,29 @@
             android:id="@+id/myProducts"
             android:icon="@drawable/ic_my_products"
             android:title="@string/my_products" />
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
-        <item/>
+        <item
+            android:title="" />
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
+        <item
+            android:title=""/>
 
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_logout"
+            android:onClick="goBackToLogIn"
             android:title="@string/logout" />
 
     </group>

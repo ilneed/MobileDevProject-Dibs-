@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAD02E"
-    tools:context=".Register">
+    android:id="@+id/registerInterface"
+    tools:context=".RegisterInterface">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,13 +34,13 @@
             android:text="CREATE ACCOUNT"
             android:textColor="#000000"
             android:textSize="24sp"
-             />
+            />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="50dp"
-           >
+            >
             <TextView
                 android:id="@+id/nameLabel"
                 android:layout_width="wrap_content"
@@ -47,7 +48,7 @@
                 android:text="NAME:"
                 android:textColor="#000000"
                 android:textSize="18sp"
-                 />
+                />
             <EditText
                 android:id="@+id/nameTextBox"
                 android:layout_width="220dp"
@@ -56,8 +57,9 @@
                 android:ems="10"
                 android:layout_marginLeft="20dp"
                 android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -73,15 +75,17 @@
                 android:textColor="#000000"
                 android:textSize="18sp"
                 />
+
             <EditText
                 android:id="@+id/emailTextBox"
                 android:layout_width="220dp"
                 android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
                 android:background="#FFFFFF"
                 android:ems="10"
-                android:layout_marginLeft="20dp"
                 android:inputType="textEmailAddress"
-                 />
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -98,14 +102,16 @@
                 android:textSize="18sp"
                 />
             <EditText
-                android:id="@+id/userText"
+                android:id="@+id/userTextBox"
                 android:layout_width="178dp"
                 android:layout_height="35dp"
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:layout_marginLeft="20dp"
                 android:inputType="textPersonName"
-             />
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -129,11 +135,13 @@
                 android:layout_marginLeft="20dp"
                 >
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/passwordTextBox"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:inputType="textPassword"
                     android:background="#ffffff"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -161,11 +169,13 @@
                 android:layout_marginLeft="15dp"
                 >
                 <EditText
-                    android:id="@+id/cpassword"
+                    android:id="@+id/cpasswordTextBox"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:inputType="textPassword"
                     android:background="#ffffff"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -190,7 +200,9 @@
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:inputType="text|number"
-               />
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                />
         </LinearLayout>
         <CheckBox
             android:id="@+id/checkBox"
@@ -200,11 +212,20 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible" />
+
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="150dp"
             android:text="SUBMIT"
             />

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "874154387693",
+    "firebase_url": "https://mobiledevdibs.firebaseio.com",
+    "project_id": "mobiledevdibs",
+    "storage_bucket": "mobiledevdibs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874154387693:android:4afd47fee6a6b5a4a004e4",
+        "android_client_info": {
+          "package_name": "com.project.mobiledevprojectdibs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874154387693-9p2c153v92g0ra2paisochftp3mm9972.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQkn3AIinp2e9PB-xtxt3NtPC1WpmuKaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874154387693-9p2c153v92g0ra2paisochftp3mm9972.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

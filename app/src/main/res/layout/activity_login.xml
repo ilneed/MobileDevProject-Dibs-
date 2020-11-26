@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="238dp"
-        android:layout_height="244dp"
+        android:layout_height="204dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/app_logo_2"/>
@@ -22,16 +22,15 @@
         android:orientation="vertical"
         android:padding="20dp">
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="#ffffff"
-            android:hint="Username"
+            android:hint="EMAIL ADDRESS"
             android:textColorHint="#000000"
             tools:ignore="DuplicateIds,MissingConstraints">
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/emailLogInTextBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="5"
@@ -43,11 +42,11 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints"
             app:passwordToggleEnabled="true"
-            android:hint="Password"
+            android:hint="PASSWORD"
             android:textColorHint="#000000"
             android:background="#ffffff">
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/passwordTextBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -86,6 +85,14 @@
             android:layout_marginTop="40dp"
             android:layout_marginLeft="80dp"
             />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:visibility="invisible" />
     </LinearLayout>
 
 
