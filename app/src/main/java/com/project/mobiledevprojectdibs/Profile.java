@@ -87,6 +87,14 @@ public class Profile extends Fragment {
        userID = firebaseAuth.getCurrentUser().getUid();
 
         DocumentReference documentReference = fStore.collection("users").document(userID);
+        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                fullName.setText(value.getString("fullName"));
+                phoneNumber.setText(value.getString("phoneNo"));
+                email.setText(value.getString("email"));
+            }
+        });
         //documentReference.addSnapshotListener((Executor) Profile.this, new EventListener<DocumentSnapshot>() {
           //  @Override
          //   public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
