@@ -2,11 +2,22 @@ package com.project.mobiledevprojectdibs;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.concurrent.Executor;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +66,37 @@ public class Profile extends Fragment {
         }
     }
 
+    TextView fullName, email, phoneNumber;
+    FirebaseAuth firebaseAuth;
+    FirebaseFirestore fStore;
+    String userID;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View root = inflater.inflate(R.layout.fragment_profile, container, false);
+
+       fullName = root.findViewById(R.id.profileFullName);
+        email = root.findViewById(R.id.profileEmail);
+        phoneNumber = root.findViewById(R.id.profileContactNo);
+
+       firebaseAuth = FirebaseAuth.getInstance();
+       fStore = FirebaseFirestore.getInstance();
+
+       userID = firebaseAuth.getCurrentUser().getUid();
+
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+        //documentReference.addSnapshotListener((Executor) Profile.this, new EventListener<DocumentSnapshot>() {
+          //  @Override
+         //   public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+          //      fullName.setText(value.getString("fullName"));
+         //       phoneNumber.setText(value.getString("phoneNo"));
+          //      email.setText(value.getString("email"));
+         //   }
+      //  });
+
+
+        return root;
     }
 }
